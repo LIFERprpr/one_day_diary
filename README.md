@@ -25,6 +25,7 @@ One Day Diaryとは、日記好きのためのSNSサイトです。具体的に�
 ## 設計書
 ER図
 <https://drive.google.com/file/d/1zRBzve2dsoStTjBm5nJ1YQ5rvjVKfjiL/view?usp=sharing>
+
 テーブル定義書
 <https://docs.google.com/spreadsheets/d/1LQPW7IY92i-SDP0MgLurEfgq7OnBdAM-i1UAmK1eamc/edit?usp=sharing>
 
