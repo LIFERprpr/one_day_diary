@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+<div>
+  <%= attachment_image_tag post, :image %>
+  <p>タイトル:<%= post.title %></p>
+  <p>内容:<%= post.contents %></p>
+  <p>ニックネーム:<%= post.user.nickname %></p>
+</div>
+<% end %>
