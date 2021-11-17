@@ -1,0 +1,13 @@
+<div>
+  <h3>プロフィール編集</h3>
+
+  <%= form_with model:@user, local:true do |f| %>
+    <label for="inputName">Nickname</label>
+    <%= f.text_field :nickname, autofocus: true, id: "inputName", placeholder: "ニックネーム" %>
+    <%= attachment_image_tag @user, :icon, :fill, 60, 60, fallback: "no_image.jpg" %>
+    <label for="inputImage">Icon</label>
+    <%= f.attachment_field :icon, placeholder: "プロフィールアイコン" %>
+
+    <%= f.submit "変更を保存" %>
+  <% end %>
+</div>

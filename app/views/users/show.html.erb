@@ -1,11 +1,16 @@
 <div>
   <h3><%= @user.nickname %></h3>
+  <%= attachment_image_tag @user, :icon, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %>
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+    <% end %>
 
 </div>
 
 <% @posts.each do |post| %>
 <div>
   <%= attachment_image_tag post, :image %>
+  <p>投稿ユーザー画像:<%= attachment_image_tag post.user, :icon, :fill, 60, 60, fallback: "no_image.jpg" %></p>
   <%= link_to post_path(post) do %>
     <p>タイトル:<%= post.title %></p>
   <% end %>

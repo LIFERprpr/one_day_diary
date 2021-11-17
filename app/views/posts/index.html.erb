@@ -5,6 +5,7 @@
     <p>タイトル:<%= post.title %></p>
   <% end %>
   <p>内容:<%= post.contents %></p>
+  <p><%= attachment_image_tag post.user, :icon, :fill, 60, 60, fallback: "no_image.jpg" %></p>
   <p>ニックネーム:<%= post.user.nickname %></p>
   <p><%= "#{post.comments.count} コメント" %></p>
 </div>
