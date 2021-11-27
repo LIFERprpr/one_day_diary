@@ -12,8 +12,8 @@
 
         <%= form_with model: @post, local:true do |f| %>
           <!--<div class="input-group mb-3 mt-4">-->
-            <h4>タイトル</h4>
-            <%= f.text_field :title, class: "form-control" %>
+          <h4>タイトル</h4>
+          <%= f.text_field :title, class: "form-control" %>
           <!--</div>-->
           <h4>内容</h4>
           <%= f.text_area :contents, class: "form-control", rows: "3" %>
