@@ -4,12 +4,31 @@
     <title>OneDayDiary</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="d-flex flex-column vh-100">
+
+    <div>
+      <%= render "layouts/header" %>
+    </div>
+
+    <main class="mb-auto">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-dark border-top text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col">
+            <p class="offset-1">日記好きのための日記投稿SNS</p>
+            <p class="font-italic offset-1">OneDayDiary</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
